@@ -9,6 +9,7 @@ import net.sf.jasperreports.engine.export.ooxml.JRDocxExporter;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
 import org.springframework.util.ResourceUtils;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -20,11 +21,10 @@ import java.util.*;
 @RequestMapping("api/document")
 public class JasperDemoController {
 
+    @CrossOrigin
     @GetMapping()
     public void getDocument(HttpServletResponse response) throws IOException, JRException {
 
-        String sourceFileName = ResourceUtils.getFile(ResourceUtils.CLASSPATH_URL_PREFIX + "Cherry.jasper")
-            .getAbsolutePath();
         List<SampleBean> dataList = new ArrayList<SampleBean>();
         JasperReport jasperReport = JasperCompileManager.compileReport(getClass().getResourceAsStream("/documentComp.jrxml"));
 

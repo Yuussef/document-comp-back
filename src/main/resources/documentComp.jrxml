@@ -10,7 +10,7 @@
     <title>
         <band height="50" splitType="Stretch">
             <image>
-                <reportElement x="240" y="0" width="104" height="50" uuid="aa2508e1-3ecc-4640-86d5-5e681938a01e"/>
+                <reportElement x="225" y="0" width="104" height="50" uuid="aa2508e1-3ecc-4640-86d5-5e681938a01e"/>
                 <imageExpression><![CDATA["C:/Users/Yuussef/Desktop/sijo/Untitled.png"]]></imageExpression>
             </image>
         </band>
@@ -21,7 +21,7 @@
     <columnHeader>
         <band height="61" splitType="Stretch">
             <textField>
-                <reportElement x="210" y="20" width="184" height="30" uuid="38eeff65-3293-46c4-9720-5a718acbdf52"/>
+                <reportElement x="190" y="20" width="184" height="30" uuid="38eeff65-3293-46c4-9720-5a718acbdf52"/>
                 <textFieldExpression><![CDATA["DOSSIER DE COMPETENCES"]]></textFieldExpression>
             </textField>
         </band>
@@ -29,7 +29,7 @@
     <detail>
         <band height="370" splitType="Stretch">
             <image>
-                <reportElement x="130" y="75" width="250" height="295" uuid="1f601b38-57eb-4077-997d-1cc9ad6f9aee"/>
+                <reportElement x="130" y="75" width="300" height="295" uuid="1f601b38-57eb-4077-997d-1cc9ad6f9aee"/>
                 <imageExpression><![CDATA["C:/Users/Yuussef/Desktop/sijo/medium500.png"]]></imageExpression>
             </image>
         </band>
@@ -40,15 +40,15 @@
     <pageFooter>
         <band height="96" splitType="Stretch">
             <textField>
-                <reportElement x="220" y="0" width="70" height="21" uuid="8b6a8cb7-6c52-43a8-a85f-b45c25e0a3ef"/>
+                <reportElement x="257" y="0" width="70" height="21" uuid="8b6a8cb7-6c52-43a8-a85f-b45c25e0a3ef"/>
                 <textFieldExpression><![CDATA["MBE"]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="205" y="30" width="110" height="21" uuid="8486f9ce-b5f7-4d06-85aa-ad54fa505147"/>
+                <reportElement x="227" y="30" width="110" height="21" uuid="8486f9ce-b5f7-4d06-85aa-ad54fa505147"/>
                 <textFieldExpression><![CDATA["Senior Cloud & IT Engineer"]]></textFieldExpression>
             </textField>
             <textField>
-                <reportElement x="210" y="60" width="100" height="21" uuid="273cbda5-1fa0-4d82-a916-072eebe7a8da"/>
+                <reportElement x="232" y="60" width="100" height="21" uuid="273cbda5-1fa0-4d82-a916-072eebe7a8da"/>
                 <textFieldExpression><![CDATA["5ans d’expérience"]]></textFieldExpression>
             </textField>
         </band>
