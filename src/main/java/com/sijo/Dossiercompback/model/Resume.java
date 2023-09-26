@@ -2,7 +2,7 @@ package com.sijo.Dossiercompback.model;
 
 import java.util.List;
 
-public class SampleBean {
+public class Resume {
 
 	String name;
 

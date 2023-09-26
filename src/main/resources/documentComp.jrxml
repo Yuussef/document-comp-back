@@ -2,6 +2,10 @@
 <!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="889f49d2-00a0-4a02-90d3-632c6f2bd231">
     <property name="com.jaspersoft.studio.report.description" value=""/>
+    <subDataset name="ListDataset" uuid="34587f8c-39c1-469b-b635-216729b93b02">
+        <field name="element" class="java.lang.String"/>
+    </subDataset>
+    <parameter name="MY_LIST" class="java.util.List"/>
     <queryString>
         <![CDATA[]]>
     </queryString>
@@ -182,6 +186,20 @@
                     <reportElement x="358" y="558" width="160" height="18" uuid="d43ca648-a6dc-43bf-8e21-d9e8a9c89e4e"/>
                     <textFieldExpression><![CDATA["Mars 2022 - Aujourd'hui"]]></textFieldExpression>
                 </textField>
+                <componentElement>
+                    <reportElement x="42" y="601" width="55" height="40" uuid="15f69ce2-7234-4935-a9dd-899e137ff2a8"/>
+                    <jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
+                        <datasetRun subDataset="ListDataset" uuid="2bfc348a-6d8f-43aa-8474-f04c438f5101">
+                            <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{MY_LIST})]]></dataSourceExpression>
+                        </datasetRun>
+                        <jr:listContents height="40" width="550">
+                            <textField>
+                                <reportElement x="0" y="0" width="550" height="20" uuid="dc557719-94d5-41c1-ae8f-3e028fd2e519"/>
+                                <textFieldExpression><![CDATA[$F{element}]]></textFieldExpression>
+                            </textField>
+                        </jr:listContents>
+                    </jr:list>
+                </componentElement>
             </frame>
         </band>
     </detail>
