@@ -1,5 +1,7 @@
 package com.sijo.Dossiercompback.model;
 
+import java.util.List;
+
 public class SampleBean {
 
 	String name;
@@ -13,6 +15,9 @@ public class SampleBean {
 	String annee2;
 	String titrediplome2;
 	String ecole2;
+	String skills;
+	List<TechnicalSkills> technicalSkills;
+
 	public String getJob() {
 		return job;
 	}
@@ -91,5 +96,21 @@ public class SampleBean {
 
 	public void setEcole(String ecole) {
 		this.ecole = ecole;
+	}
+
+	public List<TechnicalSkills> getTechnicalSkills() {
+		return technicalSkills;
+	}
+
+	public void setTechnicalSkills(List<TechnicalSkills> technicalSkills) {
+		this.technicalSkills = technicalSkills;
+	}
+
+	public String getSkills() {
+		return skills;
+	}
+
+	public void setSkills(String skills) {
+		this.skills = skills;
 	}
 }

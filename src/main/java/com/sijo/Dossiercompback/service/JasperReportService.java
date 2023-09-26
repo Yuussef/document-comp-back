@@ -1,6 +1,7 @@
 package com.sijo.Dossiercompback.service;
 
 import com.sijo.Dossiercompback.model.SampleBean;
+import com.sijo.Dossiercompback.model.TechnicalSkills;
 import jakarta.servlet.http.HttpServletResponse;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
@@ -54,9 +55,29 @@ public class JasperReportService {
         sampleBean.setAnnee2("2013");
         sampleBean.setTitrediplome2("Baccalauréat en Sciences Mathématique");
         sampleBean.setEcole2("– Lycée XX");
+        sampleBean.setSkills("Compétences principales :Azure Active Directory, System Center Configuration Manager, VMware ESX Servers, Vmware, Microsoft Azure, Linux, Windows PowerShell, Dynamic Host Configuration Protocol, Red Hat Enterprise Linux, Domain Name System (DNS).\n" +
+                "Gestion des Systèmes :Active Directory, Active Directory Federation Services, Nagios, Veeam, Vmware, Wsus.\n" +
+                "Solution Cloud :Amazon Web Services, IBM Cloud Computing, Infrastructure As A Service (IaaS), Microsoft Azure, Platform As A Service (PAAS).\n" +
+                "Cyber-sécurité :Kali Linux, Metasploit, Security Information and Event Management, Symantec.\n" +
+                "Systèmes d'exploitation :CentOS, Linux, Microsoft Windows, Windows Servers.\n" +
+                "Virtualisation :VMware ESX Servers, VMware VSphere, Vcenter, Xendesktop.\n" +
+                "Cloud computing :Azure Active Directory, Cloud Platform System, Nutanix.\n" +
+                "Design et Développement Web :Cascading Style Sheets (CSS), HTML5, Web Applications.\n" +
+                "Outils de développement logiciel :Docker, Red Hat Enterprise Linux, Terraform.\n" +
+                "Bureau et productivité :Microsoft Access, Microsoft Office.\n" +
+                "C et C++ :C, C++.\n" +
+                "Protection contre les logiciels malveillants :Antivirus Softwares, Nessus.\n" +
+                "Autres :Bash Shell, Domain Name System (DNS), Dynamic Host Configuration Protocol, Grafana, Java, Kubernetes, Snort, System Center Configuration Manager, Vrealize Operations Manager (VROPS), Windows PowerShell.\n");
+        TechnicalSkills technicalSkill = new TechnicalSkills();
+        technicalSkill.setTitle("This title");
+        technicalSkill.setLabel("this value");
+        List<TechnicalSkills>technicalSkills = new ArrayList<>();
+        technicalSkills.add(technicalSkill);
+        sampleBean.setTechnicalSkills(technicalSkills);
         dataList.add(sampleBean);
         JRBeanCollectionDataSource beanColDataSource = new JRBeanCollectionDataSource(dataList);
-        Map<String, Object> parameters = new HashMap();
+        HashMap<String, Object> parameters = new HashMap<>();
+        parameters.put("Item", technicalSkills);
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, beanColDataSource);
         JRDocxExporter exporter = new JRDocxExporter();
         exporter.setExporterInput(new SimpleExporterInput(jasperPrint));

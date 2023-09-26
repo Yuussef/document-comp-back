@@ -15,6 +15,7 @@
     <field name="annee2" class="java.lang.String"/>
     <field name="titrediplome2" class="java.lang.String"/>
     <field name="ecole2" class="java.lang.String"/>
+    <field name="skills" class="java.lang.String"/>
     <background>
         <band splitType="Stretch"/>
     </background>
@@ -65,99 +66,122 @@
         </band>
         <band height="802" splitType="Stretch">
             <frame>
-                <reportElement x="0" y="4" width="550" height="776" uuid="54258df1-e8a7-4934-bb40-4f5c40bbb8a9"/>
+                <reportElement x="2" y="0" width="550" height="776" uuid="b76f8d50-105f-4d8b-88fc-fd4b31c018cb"/>
                 <box>
                     <pen lineWidth="0.75"/>
                 </box>
                 <image>
-                    <reportElement x="234" y="5" width="90" height="35" uuid="bc05e13a-3764-4bb6-badb-462655fa854b"/>
+                    <reportElement x="234" y="5" width="90" height="35" uuid="3e3031e6-e67f-49d4-9118-05f3e8195219"/>
                     <imageExpression><![CDATA["C:/Users/Yuussef/Desktop/sijo/sijoPetit.png"]]></imageExpression>
                 </image>
+                <textField>
+                    <reportElement x="40" y="81" width="70" height="20" uuid="6384800a-7be4-4614-8b46-b621f5132e86"/>
+                    <textElement markup="html">
+                        <font fontName="Calibri" size="14" isBold="false" isUnderline="true"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA["Diplômes :"]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="51" y="111" width="60" height="20" uuid="f1040b0e-f7ce-4b31-9456-cd34eb83c7e9">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{annee}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="152" y="111" width="198" height="20" uuid="b95dbf62-82d0-45f5-8372-cd127aacff4c"/>
+                    <textElement>
+                        <font fontName="Calibri" size="11"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{titrediplome}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="382" y="111" width="151" height="26" uuid="a1247623-a261-4ee6-afdd-7a2523f3782d">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <textElement>
+                        <font fontName="Calibri" size="11" isItalic="true"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{ecole}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="52" y="144" width="60" height="20" uuid="63feac8d-256e-445b-b935-96d01fea486f">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <textFieldExpression><![CDATA[$F{annee2}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="151" y="144" width="198" height="20" uuid="7fd4abbe-e872-45bf-a170-f0dd76dd50c4">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <textElement>
+                        <font fontName="Calibri" size="11"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{titrediplome2}]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="383" y="144" width="151" height="26" uuid="17d13e4c-c74c-4509-90ca-468beeb874b9">
+                        <property name="com.jaspersoft.studio.unit.y" value="px"/>
+                    </reportElement>
+                    <textElement>
+                        <font fontName="Calibri" size="11" isItalic="true"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA[$F{ecole2}]]></textFieldExpression>
+                </textField>
                 <frame>
-                    <reportElement x="0" y="4" width="550" height="776" uuid="b76f8d50-105f-4d8b-88fc-fd4b31c018cb"/>
-                    <box>
-                        <pen lineWidth="0.75"/>
-                    </box>
-                    <image>
-                        <reportElement x="234" y="5" width="90" height="35" uuid="3e3031e6-e67f-49d4-9118-05f3e8195219"/>
-                        <imageExpression><![CDATA["C:/Users/Yuussef/Desktop/sijo/sijoPetit.png"]]></imageExpression>
-                    </image>
+                    <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="30" y="184" width="490" height="24" forecolor="#4D1312" backcolor="#828282" uuid="d0404e11-d26c-4185-888d-ca3f3d6b11f3"/>
+                    <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
                     <textField>
-                        <reportElement x="40" y="81" width="70" height="20" uuid="6384800a-7be4-4614-8b46-b621f5132e86"/>
+                        <reportElement x="195" y="5" width="109" height="20" uuid="6384800a-7be4-4614-8b46-b621f5132e86"/>
                         <textElement>
-                            <font fontName="Calibri" size="14" isBold="false"/>
+                            <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
                         </textElement>
-                        <textFieldExpression><![CDATA["Diplômes"]]></textFieldExpression>
+                        <textFieldExpression><![CDATA["COMPETENCES"]]></textFieldExpression>
                     </textField>
-                    <textField>
-                        <reportElement x="51" y="111" width="60" height="20" uuid="f1040b0e-f7ce-4b31-9456-cd34eb83c7e9">
-                            <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                        </reportElement>
-                        <textFieldExpression><![CDATA[$F{annee}]]></textFieldExpression>
-                    </textField>
-                    <textField>
-                        <reportElement x="152" y="111" width="198" height="20" uuid="b95dbf62-82d0-45f5-8372-cd127aacff4c"/>
-                        <textElement>
-                            <font fontName="Calibri" size="11"/>
-                        </textElement>
-                        <textFieldExpression><![CDATA[$F{titrediplome}]]></textFieldExpression>
-                    </textField>
-                    <textField>
-                        <reportElement x="382" y="111" width="151" height="26" uuid="a1247623-a261-4ee6-afdd-7a2523f3782d">
-                            <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                        </reportElement>
-                        <textElement>
-                            <font fontName="Calibri" size="11" isItalic="true"/>
-                        </textElement>
-                        <textFieldExpression><![CDATA[$F{ecole}]]></textFieldExpression>
-                    </textField>
-                    <textField>
-                        <reportElement x="52" y="144" width="60" height="20" uuid="63feac8d-256e-445b-b935-96d01fea486f">
-                            <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                        </reportElement>
-                        <textFieldExpression><![CDATA[$F{annee2}]]></textFieldExpression>
-                    </textField>
-                    <textField>
-                        <reportElement x="151" y="144" width="198" height="20" uuid="7fd4abbe-e872-45bf-a170-f0dd76dd50c4">
-                            <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                        </reportElement>
-                        <textElement>
-                            <font fontName="Calibri" size="11"/>
-                        </textElement>
-                        <textFieldExpression><![CDATA[$F{titrediplome2}]]></textFieldExpression>
-                    </textField>
-                    <textField>
-                        <reportElement x="383" y="144" width="151" height="26" uuid="17d13e4c-c74c-4509-90ca-468beeb874b9">
-                            <property name="com.jaspersoft.studio.unit.y" value="px"/>
-                        </reportElement>
-                        <textElement>
-                            <font fontName="Calibri" size="11" isItalic="true"/>
-                        </textElement>
-                        <textFieldExpression><![CDATA[$F{ecole2}]]></textFieldExpression>
-                    </textField>
-                    <frame>
-                        <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="30" y="184" width="503" height="24" forecolor="#4D1312" backcolor="#828282" uuid="d0404e11-d26c-4185-888d-ca3f3d6b11f3"/>
-                        <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
-                        <textField>
-                            <reportElement x="195" y="5" width="109" height="20" uuid="6384800a-7be4-4614-8b46-b621f5132e86"/>
-                            <textElement>
-                                <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
-                            </textElement>
-                            <textFieldExpression><![CDATA["DIPLOMES"]]></textFieldExpression>
-                        </textField>
-                    </frame>
-                    <frame>
-                        <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="34" y="52" width="503" height="24" forecolor="#4D1312" backcolor="#828282" uuid="639118ba-8708-4bac-bd3c-a981d7728d6c"/>
-                        <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
-                        <textField>
-                            <reportElement x="195" y="5" width="109" height="20" uuid="f3da4c62-6e0e-49b1-b5a1-e0654503f250"/>
-                            <textElement>
-                                <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
-                            </textElement>
-                            <textFieldExpression><![CDATA["FORMATIONS"]]></textFieldExpression>
-                        </textField>
-                    </frame>
                 </frame>
+                <frame>
+                    <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="30" y="52" width="489" height="24" forecolor="#4D1312" backcolor="#828282" uuid="639118ba-8708-4bac-bd3c-a981d7728d6c"/>
+                    <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+                    <textField>
+                        <reportElement x="195" y="5" width="109" height="20" uuid="f3da4c62-6e0e-49b1-b5a1-e0654503f250"/>
+                        <textElement>
+                            <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
+                        </textElement>
+                        <textFieldExpression><![CDATA["FORMATIONS"]]></textFieldExpression>
+                    </textField>
+                </frame>
+                <textField>
+                    <reportElement x="41" y="221" width="183" height="20" uuid="fc076de8-1dd8-48db-8a09-f15818288286"/>
+                    <textElement markup="html">
+                        <font fontName="Calibri" size="14" isBold="false" isUnderline="true"/>
+                    </textElement>
+                    <textFieldExpression><![CDATA["Compétences techniques :"]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="70" y="259" width="422" height="221" uuid="c8f2d462-a2cf-4a5d-b50f-a44c7d87a83d"/>
+                    <textFieldExpression><![CDATA[$F{skills}]]></textFieldExpression>
+                </textField>
+                <frame>
+                    <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="30" y="491" width="489" height="24" forecolor="#4D1312" backcolor="#828282" uuid="639118ba-8708-4bac-bd3c-a981d7728d6c"/>
+                    <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
+                    <textField>
+                        <reportElement x="130" y="3" width="333" height="18" uuid="f3da4c62-6e0e-49b1-b5a1-e0654503f250"/>
+                        <textElement>
+                            <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
+                        </textElement>
+                        <textFieldExpression><![CDATA["EXPERIENCES PROFESSIONNELLES"]]></textFieldExpression>
+                    </textField>
+                </frame>
+                <line>
+                    <reportElement x="34" y="581" width="480" height="1" uuid="e26343a5-fc49-4654-b4a0-66ca76a6c3c8"/>
+                </line>
+                <textField>
+                    <reportElement x="36" y="558" width="120" height="14" uuid="9161e1e5-ebb7-49c9-887e-4706eb11dc04"/>
+                    <textFieldExpression><![CDATA["HUAWEI"]]></textFieldExpression>
+                </textField>
+                <textField>
+                    <reportElement x="358" y="558" width="160" height="18" uuid="d43ca648-a6dc-43bf-8e21-d9e8a9c89e4e"/>
+                    <textFieldExpression><![CDATA["Mars 2022 - Aujourd'hui"]]></textFieldExpression>
+                </textField>
             </frame>
         </band>
     </detail>
