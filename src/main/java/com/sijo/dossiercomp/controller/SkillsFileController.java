@@ -12,7 +12,7 @@ import java.io.IOException;
 @RestController
 @RequestMapping("/api/reports")
 @RequiredArgsConstructor
-public class DocumentCompet {
+public class SkillsFileController {
 
 
         private final EditionSkillsFileService editionSkillsFileService;
