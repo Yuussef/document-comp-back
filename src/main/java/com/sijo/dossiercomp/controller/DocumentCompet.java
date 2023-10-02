@@ -1,6 +1,6 @@
 package com.sijo.dossiercomp.controller;
 
-import com.sijo.dossiercomp.service.EditionDossierService;
+import com.sijo.dossiercomp.service.EditionSkillsFileService;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import net.sf.jasperreports.engine.JRException;
@@ -15,11 +15,11 @@ import java.io.IOException;
 public class DocumentCompet {
 
 
-        private final EditionDossierService editionDossierService;
+        private final EditionSkillsFileService editionSkillsFileService;
 
         @GetMapping("/pdf")
         public void generatePdfReport(HttpServletResponse response) throws IOException, JRException {
-                byte[] pdfReport = editionDossierService.generatePdfReport();
+                byte[] pdfReport = editionSkillsFileService.generatePdfReport();
 
                 response.setContentType("application/pdf");
                 response.setHeader("Content-Disposition", "inline; filename=report.pdf");
@@ -31,7 +31,7 @@ public class DocumentCompet {
         @GetMapping(value = "/word")
         public void exportDynamicTransactionReport(
                                                             HttpServletResponse response) throws IOException, JRException{
-                editionDossierService.generateWordReport( response);
+                editionSkillsFileService.generateWordReport( response);
 }
 
         }

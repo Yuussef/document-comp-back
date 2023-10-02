@@ -5,7 +5,7 @@ import net.sf.jasperreports.engine.JRException;
 
 import java.io.IOException;
 
-public interface EditionDossierService {
+public interface EditionSkillsFileService {
      byte[] generatePdfReport() throws JRException;
      void generateWordReport(HttpServletResponse response) throws JRException, IOException;
 }

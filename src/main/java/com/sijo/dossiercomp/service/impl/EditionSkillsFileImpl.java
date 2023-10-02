@@ -1,7 +1,8 @@
-package com.sijo.dossiercomp.service;
+package com.sijo.dossiercomp.service.impl;
 
 import com.sijo.dossiercomp.model.Resume;
 import com.sijo.dossiercomp.model.TechnicalSkills;
+import com.sijo.dossiercomp.service.EditionSkillsFileService;
 import com.sijo.dossiercomp.utils.Constant;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +19,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
-public class EditionDossierServiceImpl  implements  EditionDossierService{
+public class EditionSkillsFileImpl implements EditionSkillsFileService {
 
     public byte[] generatePdfReport() throws JRException {
 
