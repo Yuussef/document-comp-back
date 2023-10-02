@@ -1,9 +1,10 @@
-package com.sijo.Dossiercompback.service;
+package com.sijo.dossiercomp.service;
 
-import com.sijo.Dossiercompback.model.Resume;
-import com.sijo.Dossiercompback.model.TechnicalSkills;
-import com.sijo.Dossiercompback.utils.Constant;
+import com.sijo.dossiercomp.model.Resume;
+import com.sijo.dossiercomp.model.TechnicalSkills;
+import com.sijo.dossiercomp.utils.Constant;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import net.sf.jasperreports.engine.*;
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
@@ -16,7 +17,8 @@ import java.io.IOException;
 import java.util.*;
 
 @Service
-public class JasperReportService {
+@RequiredArgsConstructor
+public class EditionDossierServiceImpl  implements  EditionDossierService{
 
     public byte[] generatePdfReport() throws JRException {
 
@@ -32,7 +34,7 @@ public class JasperReportService {
         return outputStream.toByteArray();
     }
 
-    public void generateWordFromJasperReport(HttpServletResponse response) throws JRException, IOException {
+    public void generateWordReport(HttpServletResponse response) throws JRException, IOException {
         List<Resume> dataList = new ArrayList<Resume>();
         JasperReport jasperReport = JasperCompileManager.compileReport(getClass().getResourceAsStream("/documentComp.jrxml"));
         Resume resume = new Resume();
@@ -59,11 +61,9 @@ public class JasperReportService {
         Map<String, Object> item1 = new HashMap<>();
         item1.put("element", "Value 1");
         myList.add(item1);
-
         Map<String, Object> item2 = new HashMap<>();
         item2.put("element", "Value 2");
         myList.add(item2);
-
         Map<String, Object> parameters = new HashMap<>();
         parameters.put("MY_LIST", myList);
         JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, beanColDataSource);

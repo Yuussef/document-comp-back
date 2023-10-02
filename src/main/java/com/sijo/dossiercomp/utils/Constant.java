@@ -1,4 +1,4 @@
-package com.sijo.Dossiercompback.utils;
+package com.sijo.dossiercomp.utils;
 
 public    final class Constant {
 

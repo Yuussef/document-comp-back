@@ -1,4 +1,4 @@
-package com.sijo.Dossiercompback.config;
+package com.sijo.dossiercomp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

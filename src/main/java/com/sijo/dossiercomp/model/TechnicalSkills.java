@@ -1,4 +1,4 @@
-package com.sijo.Dossiercompback.model;
+package com.sijo.dossiercomp.model;
 
 import lombok.Data;
 

@@ -164,42 +164,7 @@
                     <reportElement x="70" y="259" width="422" height="221" uuid="c8f2d462-a2cf-4a5d-b50f-a44c7d87a83d"/>
                     <textFieldExpression><![CDATA[$F{skills}]]></textFieldExpression>
                 </textField>
-                <frame>
-                    <reportElement stretchType="ElementGroupHeight" mode="Opaque" x="30" y="491" width="489" height="24" forecolor="#4D1312" backcolor="#828282" uuid="639118ba-8708-4bac-bd3c-a981d7728d6c"/>
-                    <box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0"/>
-                    <textField>
-                        <reportElement x="130" y="3" width="333" height="18" uuid="f3da4c62-6e0e-49b1-b5a1-e0654503f250"/>
-                        <textElement>
-                            <font fontName="Calibri" size="14" isBold="true" isItalic="false"/>
-                        </textElement>
-                        <textFieldExpression><![CDATA["EXPERIENCES PROFESSIONNELLES"]]></textFieldExpression>
-                    </textField>
-                </frame>
-                <line>
-                    <reportElement x="34" y="581" width="480" height="1" uuid="e26343a5-fc49-4654-b4a0-66ca76a6c3c8"/>
-                </line>
-                <textField>
-                    <reportElement x="36" y="558" width="120" height="14" uuid="9161e1e5-ebb7-49c9-887e-4706eb11dc04"/>
-                    <textFieldExpression><![CDATA["HUAWEI"]]></textFieldExpression>
-                </textField>
-                <textField>
-                    <reportElement x="358" y="558" width="160" height="18" uuid="d43ca648-a6dc-43bf-8e21-d9e8a9c89e4e"/>
-                    <textFieldExpression><![CDATA["Mars 2022 - Aujourd'hui"]]></textFieldExpression>
-                </textField>
-                <componentElement>
-                    <reportElement x="42" y="601" width="55" height="40" uuid="15f69ce2-7234-4935-a9dd-899e137ff2a8"/>
-                    <jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
-                        <datasetRun subDataset="ListDataset" uuid="2bfc348a-6d8f-43aa-8474-f04c438f5101">
-                            <dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($P{MY_LIST})]]></dataSourceExpression>
-                        </datasetRun>
-                        <jr:listContents height="40" width="550">
-                            <textField>
-                                <reportElement x="0" y="0" width="550" height="20" uuid="dc557719-94d5-41c1-ae8f-3e028fd2e519"/>
-                                <textFieldExpression><![CDATA[$F{element}]]></textFieldExpression>
-                            </textField>
-                        </jr:listContents>
-                    </jr:list>
-                </componentElement>
+
             </frame>
         </band>
     </detail>
